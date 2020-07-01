@@ -1,4 +1,3 @@
-```
 sudo python3 ./httpScrape.py -h
 
        __    __  __       _____                          
@@ -18,5 +17,7 @@ httpScrape
 optional arguments:
   -h, --help            show this help message and exit
   -c CIDR, --cidr CIDR  cidr block to scan
-  -p PORTS, --ports PORTS  https ports
-```
+  -p PORTS, --ports PORTS  ports
+
+Requirements:
+pip install python-masscan
