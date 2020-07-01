@@ -90,7 +90,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="httpScrape")
     parser.add_argument("-c", "--cidr", type=str, help="cidr block to scan", default="192.168.1.0/24")
-    parser.add_argument("-p", "--ports", type=str, help="https ports", default=443)
+    parser.add_argument("-p", "--ports", type=str, help="ports", default=443)
     args = parser.parse_args()
     cidr = args.cidr
     ports = args.ports
