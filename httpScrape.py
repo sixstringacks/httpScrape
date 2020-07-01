@@ -94,13 +94,10 @@ if __name__ == "__main__":
     args = parser.parse_args()
     cidr = args.cidr
     ports = args.ports
-    #cidr = "13.82.93.245/32,13.82.101.179/32,13.82.175.96/32,13.90.143.69/32,13.90.213.204/32,13.92.139.214/32,13.92.193.110/32,13.92.237.218/32,20.42.26.252/32,20.49.104.0/25,23.96.0.52/32,23.96.1.109/32,23.96.13.243/32,23.96.32.128/32,23.96.96.142/32,23.96.103.159/32,23.96.112.53/32,23.96.113.128/32,23.96.124.25/32,40.71.0.179/32,40.71.11.128/25,40.71.177.34/32,40.71.199.117/32,40.71.234.254/32"
-    cidr = "192.168.2.0/24"
-    ports = "8080,443,8443"
 
     temp_cert_file = get_temp_file()
 
-    # use masscan to check for listening hosts
+    # use masscan to scan for lists listening on specified ports
     mas = masscan.PortScanner()
     mas.scan(cidr, str(ports))
 
@@ -122,11 +119,8 @@ if __name__ == "__main__":
             host_name = key
 
         cert_info = get_cert_info(str(host_name), int(value), temp_cert_file)
+        
         print("\n[*] Results for host:", host_name, "- Port:", value)
         
         for key,value in cert_info.items():
-            print(" " + key.ljust(17, "."),value)
-
-        #pprint.pprint(cert_info)
-
-    
+            print(" " + key.ljust(17, "."),value)    
