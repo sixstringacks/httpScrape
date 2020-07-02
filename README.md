@@ -1,3 +1,5 @@
+httpScrape is based somewhat on [sslScrape](https://github.com/cheetz/sslScrape) written by Peter Kim. I was having lots of problems trying to get sslScrape to decode self-signed certs so I rewrote it.
+
 sudo python3 ./httpScrape.py -h
 
 ```
