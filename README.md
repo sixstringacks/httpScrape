@@ -11,7 +11,7 @@ sudo python3 ./httpScrape.py -h
                 /_/                        /_/           
 
     httpScrape | A tool for scraping SSL certificates
-               written by @infoplague
+               written by @autocowrekt
     
 usage: httpScrape.py [-h] [-c CIDR] [-p PORTS]
 
