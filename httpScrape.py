@@ -85,7 +85,7 @@ if __name__ == "__main__":
                 /_/                        /_/           
 
     httpScrape | A tool for scraping SSL certificates
-               written by @autocorwrekt
+               written by @sixstringacks
     ''')
 
     parser = argparse.ArgumentParser(description="httpScrape")
